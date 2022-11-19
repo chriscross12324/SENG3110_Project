@@ -170,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Font Include="Assets\MPLUSRounded1c-Bold.ttf" />
+    <Font Include="Assets\MPLUSRounded1c-Medium.ttf" />
   </ItemGroup>
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 

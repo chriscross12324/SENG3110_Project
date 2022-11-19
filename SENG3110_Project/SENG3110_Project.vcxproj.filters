@@ -67,5 +67,8 @@
     <Font Include="Assets\MPLUSRounded1c-Bold.ttf">
       <Filter>Assets</Filter>
     </Font>
+    <Font Include="Assets\MPLUSRounded1c-Medium.ttf">
+      <Filter>Assets</Filter>
+    </Font>
   </ItemGroup>
 </Project>

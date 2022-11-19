@@ -13,11 +13,15 @@ using namespace Microsoft::UI::Xaml;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
+
+
 namespace winrt::SENG3110_Project::implementation
 {
     MainWindow::MainWindow()
     {
         InitializeComponent();
+        this->ExtendsContentIntoTitleBar(true);
+        this->SetTitleBar(titleBar());
     }
 
     int32_t MainWindow::MyProperty()
@@ -32,6 +36,6 @@ namespace winrt::SENG3110_Project::implementation
 
     void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
-        myButton().Content(box_value(L"Clicked"));
+        myButton().Content(box_value(L"Logging In"));
     }
 }
