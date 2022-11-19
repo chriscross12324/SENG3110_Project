@@ -12,7 +12,7 @@
 
     <RelativePanel Background="#090909">
 
-        <Rectangle Name="titleBar" Fill="Transparent" Height="28" Width="10"/>
+        <Rectangle Name="titleBar" Fill="#090909" Height="28" Width="10"/>
 
        
         <StackPanel 
@@ -22,15 +22,31 @@
             HorizontalAlignment="Center" 
             VerticalAlignment="Center">
             <Image Source="/Assets/icon_AppIcon.png" Height="125" Width="125"/>
-            <TextBlock Text="Repair Program" FontFamily="Assets\MPLUSRounded1c-Bold.ttf#Rounded Mplus 1c" FontSize="40" Margin="0, 20, 0, 80"/>
-            <Border CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212" Width="220">
-                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Padding="10">
-                    <TextBlock Text="Login" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20"/>
-                    <TextBox Name="accountEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
-                    <PasswordBox Name="accountPasswordInput" Header="Password" PasswordChar="•" Margin="0, 0, 0, 20"/>
-                    <Button x:Name="myButton" Click="myButton_Click" Background="DodgerBlue">Login</Button>
-                </StackPanel>
-            </Border>
+            <TextBlock Text="Repair Program" TextAlignment="Center" FontFamily="Assets\MPLUSRounded1c-Bold.ttf#Rounded Mplus 1c" FontSize="40" Margin="0, 20, 0, 80"/>
+            <StackPanel Orientation="Horizontal">
+                <Border CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212" Width="220">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Padding="10">
+                        <TextBlock Text="Create Account" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20"/>
+                        <TextBox Name="createAccountEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
+                        <StackPanel Orientation="Horizontal">
+                            <PasswordBox Name="createAccountPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97"/>
+                            <Rectangle Width="5"/>
+                            <PasswordBox Name="createAccountConfirmPinInput" Header="Confirm Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97.5"/>
+                        </StackPanel>
+                        
+                        <Button x:Name="createAccountButton" Click="myButton_Click" Background="#129cff">Create Account</Button>
+                    </StackPanel>
+                </Border>
+                <Rectangle Width="20"/>
+                <Border CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212" Width="220">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Padding="10">
+                        <TextBlock Text="Login" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20"/>
+                        <TextBox Name="loginEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
+                        <PasswordBox Name="loginPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20"/>
+                        <Button x:Name="loginButton" Click="myButton_Click" Background="#126dff">Login</Button>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
         </StackPanel>
 
         <Border CornerRadius="10, 0, 0, 0" 

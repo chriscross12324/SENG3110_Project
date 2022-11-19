@@ -36,6 +36,6 @@ namespace winrt::SENG3110_Project::implementation
 
     void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
-        myButton().Content(box_value(L"Logging In"));
+        loginButton().Content(box_value(L"Logging In"));
     }
 }
