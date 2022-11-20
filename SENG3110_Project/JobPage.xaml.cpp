@@ -33,5 +33,6 @@ namespace winrt::SENG3110_Project::implementation
     void JobPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
         myButton().Content(box_value(L"Clicked"));
+
     }
 }

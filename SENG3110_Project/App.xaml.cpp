@@ -42,8 +42,14 @@ App::App()
 /// will be used such as when the application is launched to open a specific file.
 /// </summary>
 /// <param name="e">Details about the launch request and process.</param>
-void App::OnLaunched(LaunchActivatedEventArgs const&)
+void App::OnLaunched(LaunchActivatedEventArgs const& e)
 {
     window = make<MainWindow>();
     window.Activate();
+
+    Frame rootFrame{ nullptr };
+    auto content = window.Content();
+    if (content) rootFrame = content.try_as<Frame>();
+
+    rootFrame.Navigate(xaml_typename<SENG3110_Project::StartingPage>(), box_value(e.Arguments()));
 }
