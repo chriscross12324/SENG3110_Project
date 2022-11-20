@@ -5,6 +5,9 @@
 
 #include "App.xaml.h"
 #include "MainWindow.xaml.h"
+#include <tchar.h>
+#include <winuser.h>
+#include <Windows.h>
 
 using namespace winrt;
 using namespace Windows::Foundation;
@@ -46,6 +49,9 @@ void App::OnLaunched(LaunchActivatedEventArgs const& e)
 {
     window = make<MainWindow>();
     window.Activate();
+    //SetWindowText("Repairly");
+    HWND w = FindWindow(0, _T("WinUI Desktop"));
+    SetWindowTextA(w, "Repairly");
 
     Frame rootFrame{ nullptr };
     auto content = window.Content();

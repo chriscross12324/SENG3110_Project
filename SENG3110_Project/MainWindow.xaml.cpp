@@ -7,6 +7,7 @@
 #if __has_include("MainWindow.g.cpp")
 #include "MainWindow.g.cpp"
 #endif
+#include <StartingPage.xaml.h>
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -24,8 +25,9 @@ namespace winrt::SENG3110_Project::implementation
     MainWindow::MainWindow()
     {
         InitializeComponent();
-        /*this->ExtendsContentIntoTitleBar(true);
-        this->SetTitleBar(titleBar());*/
+        
+        //Set TitleBar Icon and Text
+        //auto hWnd = WinRT::Interop::WindowNative::GetWindowHandle(this);
     }
 
     int32_t MainWindow::MyProperty()

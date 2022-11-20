@@ -24,6 +24,9 @@ namespace winrt::SENG3110_Project::implementation
     StartingPage::StartingPage()
     {
         InitializeComponent();
+        //this->SetTitleBar(titleBar());
+        /*this->ExtendsContentIntoTitleBar(true);
+        this->SetTitleBar(titleBar());*/
     }
 
     int32_t StartingPage::MyProperty()
