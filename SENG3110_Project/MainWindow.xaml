@@ -10,11 +10,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <RelativePanel Background="#090909">
+    <RelativePanel>
+        <Grid x:Name="titleBar" Background="Black" Width="1000">
+            <Image Source="/Assets/icon_appIcon.png"
+           HorizontalAlignment="Left" 
+           Width="16" Height="28" 
+           Margin="8,0"/>
+            <TextBlock x:Name="AppTitleTextBlock" Text="Repairly"
+               TextWrapping="NoWrap"
+               Style="{StaticResource CaptionTextBlockStyle}" 
+               VerticalAlignment="Center"
+               Margin="30,0,0,0"/>
+        </Grid>
 
-        <Rectangle Name="titleBar" Fill="#090909" Height="28" Width="10"/>
-
-       
         <StackPanel 
             RelativePanel.AlignVerticalCenterWithPanel="true"
             RelativePanel.AlignHorizontalCenterWithPanel="true"
@@ -23,30 +31,36 @@
             VerticalAlignment="Center">
             <Image Source="/Assets/icon_AppIcon.png" Height="125" Width="125"/>
             <TextBlock Text="Repair Program" TextAlignment="Center" FontFamily="Assets\MPLUSRounded1c-Bold.ttf#Rounded Mplus 1c" FontSize="40" Margin="0, 20, 0, 80"/>
-            <StackPanel Orientation="Horizontal">
-                <Border CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212" Width="220">
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Padding="10">
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="10">
                         <TextBlock Text="Create Account" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20"/>
                         <TextBox Name="createAccountEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
                         <StackPanel Orientation="Horizontal">
-                            <PasswordBox Name="createAccountPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97"/>
+                            <PasswordBox Name="createAccountPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97.5"/>
                             <Rectangle Width="5"/>
                             <PasswordBox Name="createAccountConfirmPinInput" Header="Confirm Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97.5"/>
                         </StackPanel>
-                        
                         <Button x:Name="createAccountButton" Click="myButton_Click" Background="#129cff">Create Account</Button>
                     </StackPanel>
                 </Border>
-                <Rectangle Width="20"/>
-                <Border CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212" Width="220">
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Width="220" Padding="10">
-                        <TextBlock Text="Login" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20"/>
+
+                <Border Grid.Column="1" CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="10">
+                        <TextBlock Text="Login" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20" Width="200"/>
                         <TextBox Name="loginEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
-                        <PasswordBox Name="loginPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20"/>
+                        <PasswordBox Name="loginPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="200"/>
                         <Button x:Name="loginButton" Click="myButton_Click" Background="#126dff">Login</Button>
                     </StackPanel>
                 </Border>
-            </StackPanel>
+
+            </Grid>
+
         </StackPanel>
 
         <Border CornerRadius="10, 0, 0, 0" 
@@ -57,9 +71,9 @@
                 RelativePanel.AlignRightWithPanel="True" 
                 RelativePanel.AlignBottomWithPanel="True"
                 Margin="0, 0, 0, 0">
-                    <TextBlock 
+            <TextBlock 
                         Text="Copyright 2022 (c)" FontSize="10"/>
         </Border>
-        
+
     </RelativePanel>
 </Window>
