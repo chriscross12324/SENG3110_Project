@@ -1,0 +1,12 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+
+namespace SENG3110_Project
+{
+    [default_interface]
+    runtimeclass JobPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        JobPage();
+        Int32 MyProperty;
+    }
+}

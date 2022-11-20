@@ -3,12 +3,16 @@
 
 #include "pch.h"
 #include "MainWindow.xaml.h"
+#include <winrt/Windows.UI.Xaml.Interop.h>
 #if __has_include("MainWindow.g.cpp")
 #include "MainWindow.g.cpp"
 #endif
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
+
+template <typename T>
+inline winrt::Windows::UI::Xaml::Interop::TypeName xaml_typename();
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,5 +41,6 @@ namespace winrt::SENG3110_Project::implementation
     void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
         loginButton().Content(box_value(L"Logging In"));
+        this->rootFrame().Navigate(xaml_typename<JobPage>());
     }
 }
