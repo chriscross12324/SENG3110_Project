@@ -10,5 +10,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Frame/>
+    <Frame>
+        <Frame.ContentTransitions>
+            <TransitionCollection>
+                <NavigationThemeTransition  />
+            </TransitionCollection>
+        </Frame.ContentTransitions>
+    </Frame>
 </Window>

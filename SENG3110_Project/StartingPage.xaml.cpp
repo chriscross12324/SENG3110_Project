@@ -4,6 +4,8 @@
 #include "pch.h"
 #include "StartingPage.xaml.h"
 #include <winrt/Windows.UI.Xaml.Interop.h>
+#include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
+//#include <winrt/Windows.UI.Xaml.Media.Animation.h>
 #if __has_include("StartingPage.g.cpp")
 #include "StartingPage.g.cpp"
 #endif
@@ -39,6 +41,6 @@ namespace winrt::SENG3110_Project::implementation
         loginButton().Content(box_value(L"Logging In"));
 
         //Navigate to Job Page
-        this->Frame().Navigate(xaml_typename<JobPage>());
+        this->Frame().Navigate(xaml_typename<JobPage>(), nullptr, Microsoft::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo());
     }
 }
