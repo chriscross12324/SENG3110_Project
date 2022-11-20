@@ -49,9 +49,12 @@ void App::OnLaunched(LaunchActivatedEventArgs const& e)
 {
     window = make<MainWindow>();
     window.Activate();
-    //SetWindowText("Repairly");
+    
+    //Set Window Title
     HWND w = FindWindow(0, _T("WinUI Desktop"));
     SetWindowTextA(w, "Repairly");
+
+    //Set WIndow Icon
 
     Frame rootFrame{ nullptr };
     auto content = window.Content();
