@@ -9,6 +9,8 @@
 #include <winuser.h>
 #include <Windows.h>
 
+using namespace winrt::Windows::UI;
+
 using namespace winrt;
 using namespace Windows::Foundation;
 using namespace Microsoft::UI::Xaml;
@@ -55,6 +57,8 @@ void App::OnLaunched(LaunchActivatedEventArgs const& e)
     SetWindowTextA(w, "Repairly");
 
     //Set WIndow Icon
+    /*WindowId windowId = GetWindowIdFromWindow();
+    AppWindow appWindow = AppWindow.GetFromWindowId(windowId);*/
 
     Frame rootFrame{ nullptr };
     auto content = window.Content();
