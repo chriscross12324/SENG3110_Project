@@ -37,7 +37,7 @@
                 <Button x:Name="filterButton" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True">Filter</Button>
             </RelativePanel>
         </Border>
-        <Border x:Name="mainPanel" Margin="10" CornerRadius="10, 10, 10, 10" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="topPanel" RelativePanel.AlignBottomWithPanel="True">
+        <Border x:Name="mainPanel" Margin="10, 0, 10, 10" CornerRadius="10, 10, 10, 10" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.Below="topPanel" RelativePanel.AlignBottomWithPanel="True">
             <RelativePanel Background="#121212" Padding="10">
                 
             </RelativePanel>
