@@ -4,6 +4,8 @@
 #pragma once
 
 #include "JobPage.g.h"
+#include <winrt/impl/Microsoft.UI.Xaml.Controls.2.h>
+#include <winrt/impl/Windows.UI.Xaml.Controls.0.h>
 
 namespace winrt::SENG3110_Project::implementation
 {
@@ -15,6 +17,13 @@ namespace winrt::SENG3110_Project::implementation
         void MyProperty(int32_t value);
 
         void myButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectCarpenter(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectElectrician(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectFloorer(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectPainter(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectPlumber(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectPoolCleaner(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void selectRoofer(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
     };
 }
 
