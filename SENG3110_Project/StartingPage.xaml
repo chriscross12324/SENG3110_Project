@@ -11,17 +11,6 @@
     mc:Ignorable="d">
 
     <RelativePanel Background="#090909">
-        <!--<Grid x:Name="titleBar" Background="Black" Width="1000">
-            <Image Source="/Assets/icon_appIcon.png"
-           HorizontalAlignment="Left" 
-           Width="16" Height="28" 
-           Margin="8,0"/>
-            <TextBlock x:Name="AppTitleTextBlock" Text="Repairly"
-               TextWrapping="NoWrap"
-               Style="{StaticResource CaptionTextBlockStyle}" 
-               VerticalAlignment="Center"
-               Margin="30,0,0,0"/>
-        </Grid>-->
 
         <StackPanel 
             RelativePanel.AlignVerticalCenterWithPanel="true"
@@ -40,13 +29,18 @@
                 <Border Grid.Column="0" CornerRadius="10, 10, 10, 10" BorderBrush="#151515" BorderThickness="2" Background="#121212">
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="10">
                         <TextBlock Text="Create Account" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Name="createAccountFNameInput" Header="First Name" Margin="0, 0, 0, 20" Width="97.5"/>
+                            <Rectangle Width="5"/>
+                            <TextBox Name="createAccountLNameInput" Header="Last Name" Margin="0, 0, 0, 20" Width="97.5"/>
+                        </StackPanel>
                         <TextBox Name="createAccountEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
                         <StackPanel Orientation="Horizontal">
                             <PasswordBox Name="createAccountPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97.5"/>
                             <Rectangle Width="5"/>
                             <PasswordBox Name="createAccountConfirmPinInput" Header="Confirm Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="97.5"/>
                         </StackPanel>
-                        <Button x:Name="createAccountButton" Click="myButton_Click" Background="#129cff">Create Account</Button>
+                        <Button x:Name="createAccountButton" Click="buttonCreateAccountClick" Background="#129cff">Create Account</Button>
                     </StackPanel>
                 </Border>
 
@@ -55,7 +49,7 @@
                         <TextBlock Text="Login" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="20" Margin="0, 0, 0, 20" Width="200"/>
                         <TextBox Name="loginEmailInput" Header="Email" Margin="0, 0, 0, 15"/>
                         <PasswordBox Name="loginPinInput" Header="Pin" PasswordChar="*" Margin="0, 0, 0, 20" Width="200"/>
-                        <Button x:Name="loginButton" Click="myButton_Click" Background="#126dff">Login</Button>
+                        <Button x:Name="loginButton" Click="buttonLoginClick" Background="#126dff">Login</Button>
                     </StackPanel>
                 </Border>
 

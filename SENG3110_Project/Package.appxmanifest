@@ -9,7 +9,7 @@
   <Identity
     Name="4039f335-09aa-4ca4-8d20-21fe73a6e04d"
     Publisher="CN=Chris"
-    Version="1.0.0.0" />
+    Version="0.1.0.0" />
 
   <Properties>
     <DisplayName>SENG3110_Project</DisplayName>
