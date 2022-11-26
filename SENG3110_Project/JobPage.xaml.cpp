@@ -42,38 +42,16 @@ namespace winrt::SENG3110_Project::implementation
         this->Frame().GoBack();
     }
 
-    void JobPage::selectCarpenter(IInspectable const&, RoutedEventArgs const&)
+    void JobPage::selectJob(IInspectable const& sender, RoutedEventArgs const&)
     {
-        jobSelectionMenu().Content(box_value(L"Carpenter"));
-    }
+        // Get Selected Item String
+        MenuFlyoutItem item = winrt::unbox_value<MenuFlyoutItem>(sender);
+        string menuItemContent = winrt::to_string(item.Text());
 
-    void JobPage::selectElectrician(IInspectable const&, RoutedEventArgs const&)
-    {
-        jobSelectionMenu().Content(box_value(L"Electrician"));
-    }
+        //Convert String to WString
+        wstring wstr(menuItemContent.begin(), menuItemContent.end());
 
-    void JobPage::selectFloorer(IInspectable const&, RoutedEventArgs const&)
-    {
-        jobSelectionMenu().Content(box_value(L"Floorer"));
-    }
-
-    void JobPage::selectPainter(IInspectable const&, RoutedEventArgs const&)
-    {
-        jobSelectionMenu().Content(box_value(L"Painter"));
-    }
-
-    void JobPage::selectPlumber(IInspectable const&, RoutedEventArgs const&)
-    {
-        jobSelectionMenu().Content(box_value(L"Plumber"));
-    }
-
-    void JobPage::selectPoolCleaner(IInspectable const&, RoutedEventArgs const&)
-    {
-        jobSelectionMenu().Content(box_value(L"Pool Cleaner"));
-    }
-
-    void JobPage::selectRoofer(IInspectable const&, RoutedEventArgs const&)
-    {
-        jobSelectionMenu().Content(box_value(L"Roofer"));
+        //Set DropDownButton Text
+        jobSelectionMenu().Content(box_value(wstr));
     }
 }

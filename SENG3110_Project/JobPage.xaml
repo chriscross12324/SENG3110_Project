@@ -27,13 +27,13 @@
                                 Margin="10, 0, 0, 0" >
                     <DropDownButton.Flyout>
                         <MenuFlyout Placement="Bottom">
-                            <MenuFlyoutItem Text="Carpenter" Click="selectCarpenter"/>
-                            <MenuFlyoutItem Text="Electrician" Click="selectElectrician"/>
-                            <MenuFlyoutItem Text="Floorer" Click="selectFloorer"/>
-                            <MenuFlyoutItem Text="Painter" Click="selectPainter"/>
-                            <MenuFlyoutItem Text="Plumber" Click="selectPlumber"/>
-                            <MenuFlyoutItem Text="Pool Cleaner" Click="selectPoolCleaner"/>
-                            <MenuFlyoutItem Text="Roofer" Click="selectRoofer"/>
+                            <MenuFlyoutItem Text="Carpenter" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Electrician" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Floorer" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Painter" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Plumber" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Pool Cleaner" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Roofer" Click="selectJob"/>
                         </MenuFlyout>
                     </DropDownButton.Flyout>
                 </DropDownButton>
