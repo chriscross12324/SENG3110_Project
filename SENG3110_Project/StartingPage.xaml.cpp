@@ -118,4 +118,9 @@ namespace winrt::SENG3110_Project::implementation
             loginButton().Content(box_value(L"Failed"));
         }
     }
+
+    //Debug
+    void StartingPage::skipLogin(IInspectable const&, RoutedEventArgs const&) {
+        this->Frame().Navigate(xaml_typename<JobPage>(), nullptr, Microsoft::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo());
+    }
 }

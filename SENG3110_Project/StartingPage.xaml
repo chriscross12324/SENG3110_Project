@@ -57,6 +57,8 @@
 
         </StackPanel>
 
+        <Button Content="Skip Login" Click="skipLogin" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignBottomWithPanel="True" Margin="10, 0, 0, 10" FontSize="8" Background="#090909" BorderThickness="0"/>
+
         <Border CornerRadius="10, 0, 0, 0" 
                 BorderBrush="#151515" 
                 BorderThickness="2" 
