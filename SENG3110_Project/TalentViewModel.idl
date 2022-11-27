@@ -1,2 +1,10 @@
-import "oaidl.idl";
-import "ocidl.idl";
+import "TalentSku.idl";
+
+namespace SENG3110_Project
+{
+	runtimeclass TalentViewModel
+	{
+		TalentViewModel();
+		TalentsSku TalentsSku{ get; };
+	}
+}

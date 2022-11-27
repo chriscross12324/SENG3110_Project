@@ -12,15 +12,18 @@
     <Midl Include="App.idl" />
     <Midl Include="MainWindow.idl" />
     <Midl Include="TalentSku.idl" />
+    <Midl Include="TalentViewModel.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
     <ClCompile Include="TalentsSku.cpp" />
+    <ClCompile Include="TalentViewModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="TalentsSku.h" />
+    <ClInclude Include="TalentViewModel.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
