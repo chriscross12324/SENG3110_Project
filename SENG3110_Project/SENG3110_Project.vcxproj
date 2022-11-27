@@ -133,6 +133,7 @@
       <DependentUpon>StartingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="Talent.h" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -163,6 +164,7 @@
       <DependentUpon>StartingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="Talent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl">
