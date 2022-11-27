@@ -15,9 +15,9 @@ class Talent
 
 public:
 	Talent();
-	Talent(int userID, string firstName, string lastName);
-	void setFirstName(string firstName);
-	void setLastName(string lastName);
+	Talent(int uID, string fName, string lName);
+	void setFirstName(string fName);
+	void setLastName(string lName);
 	void addJobType(string jobType, int jobCost);
 	void removeJobType(string jobType);
 	void updateJobType(string jobType, int jobCost);
@@ -31,8 +31,7 @@ public:
 	Talent talent;
 	Node* next;
 
-	Node();
-	Node(Talent talent, Node* next);
+	Node(Talent tal, Node* next);
 };
 
 class TalentLinkedList

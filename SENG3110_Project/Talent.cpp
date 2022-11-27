@@ -4,22 +4,22 @@
 
 Talent::Talent() {
 	userID = 000;
-	firstName = "";
-	lastName = "";
+	firstName = "N/A";
+	lastName = "N/A";
 }
 
-Talent::Talent(int userID, string firstName, string lastName) {
-	userID = userID;
-	firstName = firstName;
-	lastName = lastName;
+Talent::Talent(int uID, string fName, string lName) {
+	userID = uID;
+	firstName = fName;
+	lastName = lName;
 }
 
-void Talent::setFirstName(string firstName) {
-	firstName = firstName;
+void Talent::setFirstName(string fName) {
+	firstName = fName;
 }
 
-void Talent::setLastName(string lastName) {
-	lastName = lastName;
+void Talent::setLastName(string lName) {
+	lastName = lName;
 }
 
 void Talent::addJobType(string jobType, int jobCost) {
@@ -39,7 +39,7 @@ int Talent::getJobCost(string jobType) {
 	try {
 		return jobTypes.at(jobType);
 	}
-	catch (const std::exception& e) {
+	catch (const std::exception&) {
 		return 0;
 	}
 }
@@ -55,13 +55,8 @@ bool Talent::checkJob(string jobType) {
 
 
 /// Node
-Node::Node() {
-	talent = Talent();
-	next = NULL;
-}
-
-Node::Node(Talent talent, Node* node) {
-	talent = talent;
+Node::Node(Talent tal, Node* node) {
+	talent = tal;
 	next = node;
 }
 
