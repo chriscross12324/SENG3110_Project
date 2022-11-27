@@ -11,10 +11,6 @@
     mc:Ignorable="d"
     Background="#090909">
 
-    <!--<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>-->
-
     <RelativePanel>
         <Border x:Name="topPanel" Margin="10" CornerRadius="10, 10, 10, 10" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
             <RelativePanel Background="#121212" Padding="10">
@@ -46,18 +42,46 @@
             <RelativePanel Background="#121212" Padding="10">
                 <ScrollViewer RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                     <RelativePanel>
-                        <StackPanel Orientation="Vertical">
-                         <Rectangle Fill="Red" Height="150" Width="100"/>
-                        <Rectangle Fill="Orange" Height="150" Width="100"/>
-                        <Rectangle Fill="Yellow" Height="150" Width="100"/>
-                        <Rectangle Fill="Green" Height="150" Width="100"/>
-                        <Rectangle Fill="Blue" Height="150" Width="100"/>
-                        <Rectangle Fill="Purple" Height="150" Width="100"/>
-                    </StackPanel>
+                        <!--<StackPanel Orientation="Vertical" RelativePanel.AlignHorizontalCenterWithPanel="True">
+                            <Rectangle Fill="Red" Height="150"/>
+                            <Rectangle Fill="Orange" Height="150" Width="100"/>
+                            <Rectangle Fill="Yellow" Height="150" Width="100"/>
+                            <Rectangle Fill="Green" Height="150" Width="100"/>
+                            <Rectangle Fill="Blue" Height="150" Width="100"/>
+                            <Rectangle Fill="Purple" Height="150" Width="100"/>
+                        </StackPanel>-->
+                        <GridView>
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <RelativePanel Background="#459827" Width="200" Height="250">
+                                        
+                                    </RelativePanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                        <!--<Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MaxWidth="200"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="200"/>
+                            </Grid.RowDefinitions>
+
+                            <GridView>
+
+                            </GridView>
+
+                            <RelativePanel Background="#193713" Grid.Column="0" Grid.Row="0" Height="100" HorizontalAlignment="Stretch"/>
+                            <RelativePanel Background="#193713" Grid.Column="1" Grid.Row="0" Height="200"  Grid.RowSpan="2"/>
+
+                            <GridView.ItemTemplate>
+
+                            </GridView.ItemTemplate>
+
+                        </Grid>-->
                     </RelativePanel>
-                    
                 </ScrollViewer>
-               
             </RelativePanel>
         </Border>
     </RelativePanel>

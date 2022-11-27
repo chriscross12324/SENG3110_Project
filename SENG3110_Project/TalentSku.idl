@@ -1,0 +1,11 @@
+namespace SENG3110_Project
+{
+	runtimeclass TalentsSku : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+	{
+		TalentsSku(String fName, String lName, String jType, Double jCost);
+		String firstName;
+		String lastName;
+		String jobType;
+		Double jobCost;
+	}
+}

@@ -133,6 +133,7 @@
       <DependentUpon>StartingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="TalentsSku.h" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -163,6 +164,7 @@
       <DependentUpon>StartingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="TalentsSku.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl">
@@ -181,6 +183,7 @@
       <DependentUpon>StartingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Midl>
+    <Midl Include="TalentSku.idl" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt">
