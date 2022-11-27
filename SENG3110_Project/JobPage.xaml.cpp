@@ -1,18 +1,21 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
-
 #include "pch.h"
 #include "JobPage.xaml.h"
 #include <string>
+#include <list>
 #include <winrt/Windows.UI.Xaml.Interop.h>
 #if __has_include("JobPage.g.cpp")
 #include "JobPage.g.cpp"
 #endif
+#include <Talent.h>
+
 using namespace std;
 using namespace winrt::Microsoft::UI::Xaml::Controls;
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
+using namespace SENG3110_Project;
 
 template <typename T>
 inline winrt::Windows::UI::Xaml::Interop::TypeName xaml_typename();
@@ -22,9 +25,14 @@ inline winrt::Windows::UI::Xaml::Interop::TypeName xaml_typename();
 
 namespace winrt::SENG3110_Project::implementation
 {
+    list<Talent> Talents;
+    TalentLinkedList talentList;
+
     JobPage::JobPage()
     {
         InitializeComponent();
+
+        //talentList.getTalents();
     }
 
     int32_t JobPage::MyProperty()
@@ -53,5 +61,17 @@ namespace winrt::SENG3110_Project::implementation
 
         //Set DropDownButton Text
         jobSelectionMenu().Content(box_value(wstr));
+
+        //Convert Linked List to List
+        Talents = talentList.convertLinkedList(talentList.head);
+        
+
+        int i = 0;
+        list<Talent>::iterator it = Talents.begin();
+        while (Talents.size() > i) {
+            advance(it, 1);
+            Talent tal = *it;
+            string name = tal.firstName;
+        }
     }
 }

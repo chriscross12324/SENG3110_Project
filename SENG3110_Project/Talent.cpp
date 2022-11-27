@@ -95,7 +95,7 @@ void TalentLinkedList::insertionSort(Node* node, string jobType) {
 	node = sorted;
 }
 
-TalentLinkedList TalentLinkedList::getTalents() {
+void TalentLinkedList::getTalents() {
 	//Create Talent Classes
 	Talent tal1 = Talent(001, "Gus", "Johnson");
 	Talent tal2 = Talent(002, "Adam", "Ioe");
@@ -104,7 +104,7 @@ TalentLinkedList TalentLinkedList::getTalents() {
 	Talent tal5 = Talent(005, "Eger", "Foir");
 
 	//Add Jobs to Talents
-	tal1.addJobType("Plumber", 12);
+	tal1.addJobType("Plumbing", 12);
 	tal1.addJobType("Flooring", 23);
 	tal2.addJobType("Carpenter", 43);
 	tal2.addJobType("Plumber", 39);
@@ -126,6 +126,15 @@ TalentLinkedList TalentLinkedList::getTalents() {
 	talentList.addTalent(tal3);
 	talentList.addTalent(tal4);
 	talentList.addTalent(tal5);
+}
 
-	return talentList;
+list<Talent> TalentLinkedList::convertLinkedList(Node* node) {
+	Node* current = node;
+	list<Talent> talents;
+
+	while (current != NULL) {
+		talents.push_back(current->talent);
+	}
+
+	return talents;
 }

@@ -8,6 +8,7 @@
     xmlns:local="using:SENG3110_Project"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:SENG3110_Project"
     mc:Ignorable="d"
     Background="#090909">
 
@@ -25,11 +26,11 @@
                         <MenuFlyout Placement="Bottom">
                             <MenuFlyoutItem Text="Carpenter" Click="selectJob"/>
                             <MenuFlyoutItem Text="Electrician" Click="selectJob"/>
-                            <MenuFlyoutItem Text="Floorer" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Flooring" Click="selectJob"/>
                             <MenuFlyoutItem Text="Painter" Click="selectJob"/>
-                            <MenuFlyoutItem Text="Plumber" Click="selectJob"/>
-                            <MenuFlyoutItem Text="Pool Cleaner" Click="selectJob"/>
-                            <MenuFlyoutItem Text="Roofer" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Plumbing" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Pool Cleaning" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Roofing" Click="selectJob"/>
                         </MenuFlyout>
                     </DropDownButton.Flyout>
                 </DropDownButton>
@@ -42,44 +43,15 @@
             <RelativePanel Background="#121212" Padding="10">
                 <ScrollViewer RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                     <RelativePanel>
-                        <!--<StackPanel Orientation="Vertical" RelativePanel.AlignHorizontalCenterWithPanel="True">
-                            <Rectangle Fill="Red" Height="150"/>
-                            <Rectangle Fill="Orange" Height="150" Width="100"/>
-                            <Rectangle Fill="Yellow" Height="150" Width="100"/>
-                            <Rectangle Fill="Green" Height="150" Width="100"/>
-                            <Rectangle Fill="Blue" Height="150" Width="100"/>
-                            <Rectangle Fill="Purple" Height="150" Width="100"/>
-                        </StackPanel>-->
-                        <GridView>
+                        <GridView ItemsSource="{x:Bind Talents}">
                             <GridView.ItemTemplate>
-                                <DataTemplate>
+                                <DataTemplate x:DataType="data:Talent">
                                     <RelativePanel Background="#459827" Width="200" Height="250">
-                                        
+                                        <TextBlock Text="{x:Bind firstName}"/>
                                     </RelativePanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
                         </GridView>
-                        <!--<Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition MaxWidth="200"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="200"/>
-                            </Grid.RowDefinitions>
-
-                            <GridView>
-
-                            </GridView>
-
-                            <RelativePanel Background="#193713" Grid.Column="0" Grid.Row="0" Height="100" HorizontalAlignment="Stretch"/>
-                            <RelativePanel Background="#193713" Grid.Column="1" Grid.Row="0" Height="200"  Grid.RowSpan="2"/>
-
-                            <GridView.ItemTemplate>
-
-                            </GridView.ItemTemplate>
-
-                        </Grid>-->
                     </RelativePanel>
                 </ScrollViewer>
             </RelativePanel>

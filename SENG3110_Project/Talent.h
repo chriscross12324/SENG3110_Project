@@ -8,12 +8,12 @@ using namespace std;
 
 class Talent
 {
+public:
 	int userID;
 	string firstName;
 	string lastName;
 	map<string, int> jobTypes;
 
-public:
 	Talent();
 	Talent(int uID, string fName, string lName);
 	void setFirstName(string fName);
@@ -42,5 +42,6 @@ public:
 
 	void addTalent(Talent talent);
 	void insertionSort(Node* node, string jobType);
-	TalentLinkedList getTalents();
+	void getTalents();
+	list<Talent> convertLinkedList(Node* node);
 };
