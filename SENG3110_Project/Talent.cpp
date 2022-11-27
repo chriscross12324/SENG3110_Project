@@ -2,11 +2,11 @@
 #include "Talent.h"
 
 
-//Talent::Talent() {
-//	userID = 000;
-//	firstName = "";
-//	lastName = "";
-//}
+Talent::Talent() {
+	userID = 000;
+	firstName = "";
+	lastName = "";
+}
 
 Talent::Talent(int userID, string firstName, string lastName) {
 	userID = userID;
@@ -54,12 +54,21 @@ bool Talent::checkJob(string jobType) {
 }
 
 
+/// Node
+Node::Node() {
+	talent = Talent();
+	next = NULL;
+}
+
+Node::Node(Talent talent, Node* node) {
+	talent = talent;
+	next = node;
+}
+
 
 /// Linked List
 void TalentLinkedList::addTalent(Talent talent) {
-	Node* newTalent = new Node();
-	newTalent->talent = talent;
-	newTalent->next = head;
+	Node* newTalent = new Node(talent, head);
 	head = newTalent;
 }
 

@@ -14,6 +14,7 @@ class Talent
 	map<string, int> jobTypes;
 
 public:
+	Talent();
 	Talent(int userID, string firstName, string lastName);
 	void setFirstName(string firstName);
 	void setLastName(string lastName);
@@ -29,6 +30,9 @@ class Node
 public:
 	Talent talent;
 	Node* next;
+
+	Node();
+	Node(Talent talent, Node* next);
 };
 
 class TalentLinkedList
