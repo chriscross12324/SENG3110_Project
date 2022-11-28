@@ -1,0 +1,10 @@
+import "TalentCls.idl";
+
+namespace SENG3110_Project
+{
+	runtimeclass TalentViewModel
+	{
+		TalentViewModel();
+		SENG3110_Project.TalentCls DefaultTalent{ get; };
+	}
+}

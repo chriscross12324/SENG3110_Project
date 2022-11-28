@@ -134,6 +134,8 @@
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="Talent.h" />
+    <ClInclude Include="TalentCls.h" />
+    <ClInclude Include="TalentViewModel.h" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -165,6 +167,8 @@
       <SubType>Code</SubType>
     </ClCompile>
     <ClCompile Include="Talent.cpp" />
+    <ClCompile Include="TalentCls.cpp" />
+    <ClCompile Include="TalentViewModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl">
@@ -183,6 +187,8 @@
       <DependentUpon>StartingPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Midl>
+    <Midl Include="TalentCls.idl" />
+    <Midl Include="TalentViewModel.idl" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt">

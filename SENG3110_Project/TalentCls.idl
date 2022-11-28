@@ -1,0 +1,12 @@
+namespace SENG3110_Project
+{
+    runtimeclass TalentCls
+    {
+        TalentCls(Int16 talentID, String talentFName, String talentLName, String jobType, Double jobCost);
+        Int16 TalentID{ get; };
+        String TalentFName{ get; };
+        String TalentLName{ get; };
+        String JobType{ get; };
+        Double JobCost{ get; };
+    }
+}

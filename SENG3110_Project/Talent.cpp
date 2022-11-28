@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Talent.h"
 
-
 Talent::Talent() {
 	userID = 000;
 	firstName = "N/A";

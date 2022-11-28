@@ -3,6 +3,7 @@
 #include <map>
 #include <winioctl.h>
 #include <iostream>
+#include <list>
 
 using namespace std;
 

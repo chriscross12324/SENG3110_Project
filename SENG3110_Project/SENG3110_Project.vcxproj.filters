@@ -11,18 +11,20 @@
   <ItemGroup>
     <Midl Include="App.idl" />
     <Midl Include="MainWindow.idl" />
-    <Midl Include="TalentSku.idl" />
+    <Midl Include="TalentCls.idl" />
     <Midl Include="TalentViewModel.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="TalentsSku.cpp" />
+    <ClCompile Include="Talent.cpp" />
+    <ClCompile Include="TalentCls.cpp" />
     <ClCompile Include="TalentViewModel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="TalentsSku.h" />
+    <ClInclude Include="Talent.h" />
+    <ClInclude Include="TalentCls.h" />
     <ClInclude Include="TalentViewModel.h" />
   </ItemGroup>
   <ItemGroup>

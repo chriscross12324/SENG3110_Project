@@ -8,7 +8,6 @@
     xmlns:local="using:SENG3110_Project"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:data="using:SENG3110_Project"
     mc:Ignorable="d"
     Background="#090909">
 
@@ -43,15 +42,16 @@
             <RelativePanel Background="#121212" Padding="10">
                 <ScrollViewer RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                     <RelativePanel>
-                        <GridView ItemsSource="{x:Bind Talents}">
+                        <TextBlock Text="{x:Bind ViewModel.DefaultTalent.TalentFName}" FontSize="24"/>
+                        <!--<GridView ItemsSource="{x:Bind ViewModel.DefaultTalent.TalentFName}">
                             <GridView.ItemTemplate>
-                                <DataTemplate x:DataType="data:Talent">
+                                <DataTemplate x:DataType="x:String">
                                     <RelativePanel Background="#459827" Width="200" Height="250">
                                         <TextBlock Text="{x:Bind firstName}"/>
                                     </RelativePanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
-                        </GridView>
+                        </GridView>-->
                     </RelativePanel>
                 </ScrollViewer>
             </RelativePanel>

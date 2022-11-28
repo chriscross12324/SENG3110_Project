@@ -9,6 +9,7 @@
 #include "JobPage.g.cpp"
 #endif
 #include <Talent.h>
+#include "TalentViewModel.h"
 
 using namespace std;
 using namespace winrt::Microsoft::UI::Xaml::Controls;
@@ -31,6 +32,8 @@ namespace winrt::SENG3110_Project::implementation
     JobPage::JobPage()
     {
         InitializeComponent();
+        m_viewModel = winrt::make<TalentViewModel>();
+	
 
         //talentList.getTalents();
     }
@@ -43,6 +46,11 @@ namespace winrt::SENG3110_Project::implementation
     void JobPage::MyProperty(int32_t /* value */)
     {
         throw hresult_not_implemented();
+    }
+
+    winrt::SENG3110_Project::TalentViewModel JobPage::ViewModel()
+    {
+        return m_viewModel;
     }
 
     void JobPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
@@ -75,3 +83,10 @@ namespace winrt::SENG3110_Project::implementation
         }
     }
 }
+
+
+
+
+
+
+
