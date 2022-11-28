@@ -133,6 +133,7 @@ list<Talent> TalentLinkedList::convertLinkedList(Node* node) {
 
 	while (current != NULL) {
 		talents.push_back(current->talent);
+		current = current->next;
 	}
 
 	return talents;

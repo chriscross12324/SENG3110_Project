@@ -1,4 +1,5 @@
 import "TalentCls.idl";
+#include <Collection.h>
 
 namespace SENG3110_Project
 {
@@ -6,5 +7,6 @@ namespace SENG3110_Project
 	{
 		TalentViewModel();
 		SENG3110_Project.TalentCls DefaultTalent{ get; };
+		Windows.Foundation.Collections.IVector<IInspectable> Talents{ get; };
 	}
 }

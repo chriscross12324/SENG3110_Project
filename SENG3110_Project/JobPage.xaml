@@ -42,16 +42,16 @@
             <RelativePanel Background="#121212" Padding="10">
                 <ScrollViewer RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignBottomWithPanel="True">
                     <RelativePanel>
-                        <TextBlock Text="{x:Bind ViewModel.DefaultTalent.TalentFName}" FontSize="24"/>
-                        <!--<GridView ItemsSource="{x:Bind ViewModel.DefaultTalent.TalentFName}">
+                        <!--<TextBlock Text="{x:Bind ViewModel.DefaultTalent.TalentFName}" FontSize="24"/>-->
+                        <GridView ItemsSource="{x:Bind ViewModel.Talents}">
                             <GridView.ItemTemplate>
-                                <DataTemplate x:DataType="x:String">
-                                    <RelativePanel Background="#459827" Width="200" Height="250">
-                                        <TextBlock Text="{x:Bind firstName}"/>
+                                <DataTemplate x:DataType="local:TalentCls">
+                                    <RelativePanel Background="#958371" Width="200" Height="250" Padding="5, 2, 5, 2">
+                                        <TextBlock Text="{x:Bind TalentID}"/>
                                     </RelativePanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
-                        </GridView>-->
+                        </GridView>
                     </RelativePanel>
                 </ScrollViewer>
             </RelativePanel>

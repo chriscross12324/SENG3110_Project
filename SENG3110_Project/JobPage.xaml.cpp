@@ -26,15 +26,15 @@ inline winrt::Windows::UI::Xaml::Interop::TypeName xaml_typename();
 
 namespace winrt::SENG3110_Project::implementation
 {
-    list<Talent> Talents;
     TalentLinkedList talentList;
+    list<Talent> Talents;
 
     JobPage::JobPage()
     {
         InitializeComponent();
         m_viewModel = winrt::make<TalentViewModel>();
-	
-
+	    
+        
         //talentList.getTalents();
     }
 
@@ -71,15 +71,23 @@ namespace winrt::SENG3110_Project::implementation
         jobSelectionMenu().Content(box_value(wstr));
 
         //Convert Linked List to List
-        Talents = talentList.convertLinkedList(talentList.head);
-        
+        Talents = talentList.convertLinkedList(talentList.sorted);
+        ViewModel().Talents().Clear();
 
-        int i = 0;
+        //ViewModel().Talents().Append(winrt::make<TalentCls>(000, L"Johny", L"Appleseed", L"", 0.0));
+
+        /*int i = 0;
         list<Talent>::iterator it = Talents.begin();
         while (Talents.size() > i) {
             advance(it, 1);
             Talent tal = *it;
             string name = tal.firstName;
+            ViewModel().Talents().Append(winrt::make<TalentCls>(000, L"tal.firstName", L"tal.lastName", L"menuItemContent", 0.0));
+            i++;
+        }*/
+
+        for (int i = 0; i < 5; i++) {
+            ViewModel().Talents().Append(winrt::make<TalentCls>(Talents.size(), L"fName", L"lName", L"jType", 0.0));
         }
     }
 }
