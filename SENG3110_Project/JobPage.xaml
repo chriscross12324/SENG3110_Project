@@ -27,7 +27,7 @@
                             <MenuFlyoutItem Text="Electrician" Click="selectJob"/>
                             <MenuFlyoutItem Text="Flooring" Click="selectJob"/>
                             <MenuFlyoutItem Text="Painter" Click="selectJob"/>
-                            <MenuFlyoutItem Text="Plumbing" Click="selectJob"/>
+                            <MenuFlyoutItem Text="Plumber" Click="selectJob"/>
                             <MenuFlyoutItem Text="Pool Cleaning" Click="selectJob"/>
                             <MenuFlyoutItem Text="Roofing" Click="selectJob"/>
                         </MenuFlyout>
@@ -46,9 +46,13 @@
                         <GridView ItemsSource="{x:Bind ViewModel.Talents}">
                             <GridView.ItemTemplate>
                                 <DataTemplate x:DataType="local:TalentCls">
-                                    <RelativePanel Background="#958371" Width="200" Height="250" Padding="5, 2, 5, 2">
+                                    <StackPanel Orientation="Vertical" Background="#958371" Width="200" Height="250" Padding="5, 2, 5, 2">
                                         <TextBlock Text="{x:Bind TalentID}"/>
-                                    </RelativePanel>
+                                        <TextBlock Text="{x:Bind JobCost}"/>
+                                        <TextBlock Text="{x:Bind TalentFName}"/>
+                                        <TextBlock Text="{x:Bind TalentLName}"/>
+                                        
+                                    </StackPanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>
                         </GridView>

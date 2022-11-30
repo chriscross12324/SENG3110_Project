@@ -27,12 +27,13 @@ inline winrt::Windows::UI::Xaml::Interop::TypeName xaml_typename();
 namespace winrt::SENG3110_Project::implementation
 {
     TalentLinkedList talentList;
-    list<Talent> Talents;
+    vector<Talent> Talents;
 
     JobPage::JobPage()
     {
         InitializeComponent();
         m_viewModel = winrt::make<TalentViewModel>();
+        talentList = talentList.getTalents();
 	    
         
         //talentList.getTalents();
@@ -71,7 +72,8 @@ namespace winrt::SENG3110_Project::implementation
         jobSelectionMenu().Content(box_value(wstr));
 
         //Convert Linked List to List
-        Talents = talentList.convertLinkedList(talentList.sorted);
+        talentList.insertionSort(talentList.head, menuItemContent);
+        Talents = talentList.convertLinkedList(talentList.head);
         ViewModel().Talents().Clear();
 
         //ViewModel().Talents().Append(winrt::make<TalentCls>(000, L"Johny", L"Appleseed", L"", 0.0));
@@ -86,8 +88,14 @@ namespace winrt::SENG3110_Project::implementation
             i++;
         }*/
 
-        for (int i = 0; i < 5; i++) {
-            ViewModel().Talents().Append(winrt::make<TalentCls>(Talents.size(), L"fName", L"lName", L"jType", 0.0));
+        //ViewModel().Talents().Append(winrt::make<TalentCls>(Talents.size(), L"fName", L"lName", L"jType", i));
+
+        for (int i = 0; i < Talents.size(); i++) {
+            Talent tal = Talents[i];
+            winrt::hstring fName = winrt::to_hstring(tal.firstName);
+            winrt::hstring lName = winrt::to_hstring(tal.lastName);
+            winrt::hstring jType = winrt::to_hstring(menuItemContent);
+            ViewModel().Talents().Append(winrt::make<TalentCls>(tal.userID, fName, lName, jType, 0.0));
         }
     }
 }

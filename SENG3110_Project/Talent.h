@@ -43,6 +43,6 @@ public:
 
 	void addTalent(Talent talent);
 	void insertionSort(Node* node, string jobType);
-	void getTalents();
-	list<Talent> convertLinkedList(Node* node);
+	TalentLinkedList getTalents();
+	vector<Talent> convertLinkedList(Node* node);
 };

@@ -23,7 +23,7 @@ namespace winrt::SENG3110_Project::implementation
 
     hstring TalentCls::TalentLName()
     {
-        return hstring{ m_talentFName };
+        return hstring{ m_talentLName };
     }
 
     hstring TalentCls::JobType()

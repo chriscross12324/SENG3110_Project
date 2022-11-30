@@ -63,6 +63,8 @@ Node::Node(Talent tal, Node* node) {
 /// Linked List
 void TalentLinkedList::addTalent(Talent talent) {
 	Node* newTalent = new Node(talent, head);
+	newTalent->talent = talent;
+	newTalent->next = head;
 	head = newTalent;
 }
 
@@ -74,7 +76,7 @@ void TalentLinkedList::insertionSort(Node* node, string jobType) {
 		Node* next = current->next;
 
 		//Check if Current Talent offeres selected job
-		if ((current->talent).checkJob(jobType)) {
+		if ((current->talent).checkJob(jobType) || 1 == 1) {
 			if (sorted == NULL || (sorted->talent).getJobCost(jobType) >= (current->talent).getJobCost(jobType)) {
 				current->next = sorted;
 				sorted = current;
@@ -94,7 +96,7 @@ void TalentLinkedList::insertionSort(Node* node, string jobType) {
 	node = sorted;
 }
 
-void TalentLinkedList::getTalents() {
+TalentLinkedList TalentLinkedList::getTalents() {
 	//Create Talent Classes
 	Talent tal1 = Talent(001, "Gus", "Johnson");
 	Talent tal2 = Talent(002, "Adam", "Ioe");
@@ -103,7 +105,7 @@ void TalentLinkedList::getTalents() {
 	Talent tal5 = Talent(005, "Eger", "Foir");
 
 	//Add Jobs to Talents
-	tal1.addJobType("Plumbing", 12);
+	tal1.addJobType("Plumber", 12);
 	tal1.addJobType("Flooring", 23);
 	tal2.addJobType("Carpenter", 43);
 	tal2.addJobType("Plumber", 39);
@@ -125,11 +127,13 @@ void TalentLinkedList::getTalents() {
 	talentList.addTalent(tal3);
 	talentList.addTalent(tal4);
 	talentList.addTalent(tal5);
+
+	return talentList;
 }
 
-list<Talent> TalentLinkedList::convertLinkedList(Node* node) {
+vector<Talent> TalentLinkedList::convertLinkedList(Node* node) {
 	Node* current = node;
-	list<Talent> talents;
+	vector<Talent> talents;
 
 	while (current != NULL) {
 		talents.push_back(current->talent);
