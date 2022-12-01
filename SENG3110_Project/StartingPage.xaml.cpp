@@ -2,6 +2,7 @@
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
 #include "pch.h"
+#include <dos.h>
 #include "StartingPage.xaml.h"
 #include <winrt/Windows.UI.Xaml.Interop.h>
 #include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
@@ -116,6 +117,7 @@ namespace winrt::SENG3110_Project::implementation
         else {
             cout << "Failed to open file";
             loginButton().Content(box_value(L"Failed"));
+            
         }
     }
 

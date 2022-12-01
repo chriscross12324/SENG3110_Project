@@ -46,12 +46,18 @@
                         <GridView ItemsSource="{x:Bind ViewModel.Talents}">
                             <GridView.ItemTemplate>
                                 <DataTemplate x:DataType="local:TalentCls">
-                                    <StackPanel Orientation="Vertical" Background="#958371" Width="200" Height="250" Padding="5, 2, 5, 2">
-                                        <TextBlock Text="{x:Bind TalentID}"/>
-                                        <TextBlock Text="{x:Bind JobCost}"/>
-                                        <TextBlock Text="{x:Bind TalentFName}"/>
-                                        <TextBlock Text="{x:Bind TalentLName}"/>
-                                        
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#212121" Width="200" Height="250" Padding="5, 2, 5, 2">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Price: $" FontFamily="Assets\MPLUSRounded1c-Light.ttf#Rounded Mplus 1c" FontSize="13"/>
+                                            <TextBlock Text="{x:Bind JobCost}" FontFamily="Assets\MPLUSRounded1c-Light.ttf#Rounded Mplus 1c" FontSize="13"/>
+                                        </StackPanel>
+                                        <TextBlock Text="{x:Bind TalentFName}" FontFamily="Assets\MPLUSRounded1c-Bold.ttf#Rounded Mplus 1c" FontSize="25"/>
+                                        <TextBlock Text="{x:Bind TalentLName}" FontFamily="Assets\MPLUSRounded1c-Medium.ttf#Rounded Mplus 1c" FontSize="15" Opacity="0.6"/>
+
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Talent ID: " FontFamily="Assets\MPLUSRounded1c-Light.ttf#Rounded Mplus 1c" FontSize="13"/>
+                                            <TextBlock Text="{x:Bind TalentID}" FontFamily="Assets\MPLUSRounded1c-Light.ttf#Rounded Mplus 1c" FontSize="13"/>
+                                        </StackPanel>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridView.ItemTemplate>

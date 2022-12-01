@@ -16,7 +16,7 @@ namespace winrt::SENG3110_Project::implementation
         std::vector<Windows::Foundation::IInspectable> talents;
         TalentLinkedList talentList;
         
-        talents.push_back(winrt::make<TalentCls>(0, L"Johny", L"Appleseed", L"", 0.0));
+        /*talents.push_back(winrt::make<TalentCls>(0, L"Johny", L"Appleseed", L"", 0.0));
         talents.push_back(winrt::make<TalentCls>(1, L"Adam", L"Kim", L"", 0.0));
         talents.push_back(winrt::make<TalentCls>(2, L"Spencer", L"Qou", L"", 0.0));
         talents.push_back(winrt::make<TalentCls>(3, L"Grtj", L"Puqa", L"", 0.0));
@@ -26,7 +26,7 @@ namespace winrt::SENG3110_Project::implementation
         talents.push_back(winrt::make<TalentCls>(7, L"Grtj", L"Puqa", L"", 0.0));
         talents.push_back(winrt::make<TalentCls>(8, L"Opa", L"Ol", L"", 0.0));
         talents.push_back(winrt::make<TalentCls>(9, L"Grtj", L"Puqa", L"", 0.0));
-        talents.push_back(winrt::make<TalentCls>(10, L"Opa", L"Ol", L"", 0.0));
+        talents.push_back(winrt::make<TalentCls>(10, L"Opa", L"Ol", L"", 0.0));*/
 
         m_talents = winrt::single_threaded_observable_vector<Windows::Foundation::IInspectable>(std::move(talents));
     }

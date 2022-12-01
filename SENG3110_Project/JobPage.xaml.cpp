@@ -34,9 +34,6 @@ namespace winrt::SENG3110_Project::implementation
         InitializeComponent();
         m_viewModel = winrt::make<TalentViewModel>();
         talentList = talentList.getTalents();
-	    
-        
-        //talentList.getTalents();
     }
 
     int32_t JobPage::MyProperty()
@@ -61,6 +58,13 @@ namespace winrt::SENG3110_Project::implementation
 
     void JobPage::selectJob(IInspectable const& sender, RoutedEventArgs const&)
     {
+        //Clear Talents list
+        Talents.clear();
+
+        //Regenerate LinkedList
+        //m_viewModel = winrt::make<TalentViewModel>();
+        talentList = talentList.getTalents();
+
         // Get Selected Item String
         MenuFlyoutItem item = winrt::unbox_value<MenuFlyoutItem>(sender);
         string menuItemContent = winrt::to_string(item.Text());
@@ -73,29 +77,16 @@ namespace winrt::SENG3110_Project::implementation
 
         //Convert Linked List to List
         talentList.insertionSort(talentList.head, menuItemContent);
+        Sleep(1);
         Talents = talentList.convertLinkedList(talentList.head);
         ViewModel().Talents().Clear();
-
-        //ViewModel().Talents().Append(winrt::make<TalentCls>(000, L"Johny", L"Appleseed", L"", 0.0));
-
-        /*int i = 0;
-        list<Talent>::iterator it = Talents.begin();
-        while (Talents.size() > i) {
-            advance(it, 1);
-            Talent tal = *it;
-            string name = tal.firstName;
-            ViewModel().Talents().Append(winrt::make<TalentCls>(000, L"tal.firstName", L"tal.lastName", L"menuItemContent", 0.0));
-            i++;
-        }*/
-
-        //ViewModel().Talents().Append(winrt::make<TalentCls>(Talents.size(), L"fName", L"lName", L"jType", i));
 
         for (int i = 0; i < Talents.size(); i++) {
             Talent tal = Talents[i];
             winrt::hstring fName = winrt::to_hstring(tal.firstName);
             winrt::hstring lName = winrt::to_hstring(tal.lastName);
             winrt::hstring jType = winrt::to_hstring(menuItemContent);
-            ViewModel().Talents().Append(winrt::make<TalentCls>(tal.userID, fName, lName, jType, 0.0));
+            ViewModel().Talents().Append(winrt::make<TalentCls>(tal.userID, fName, lName, jType, tal.getJobCost(menuItemContent)));
         }
     }
 }

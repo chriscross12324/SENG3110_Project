@@ -68,7 +68,7 @@ void TalentLinkedList::addTalent(Talent talent) {
 	head = newTalent;
 }
 
-void TalentLinkedList::insertionSort(Node* node, string jobType) {
+void TalentLinkedList::insertionSort(Node *node, string jobType) {
 	sorted = NULL;
 	Node* current = node;
 
@@ -76,7 +76,7 @@ void TalentLinkedList::insertionSort(Node* node, string jobType) {
 		Node* next = current->next;
 
 		//Check if Current Talent offeres selected job
-		if ((current->talent).checkJob(jobType) || 1 == 1) {
+		if ((current->talent).checkJob(jobType)) {
 			if (sorted == NULL || (sorted->talent).getJobCost(jobType) >= (current->talent).getJobCost(jobType)) {
 				current->next = sorted;
 				sorted = current;
@@ -84,7 +84,7 @@ void TalentLinkedList::insertionSort(Node* node, string jobType) {
 			else {
 				Node* newCurrent = sorted;
 
-				while (newCurrent->next != NULL && (newCurrent->next->talent).getJobCost(jobType) < (current->talent).getJobCost(jobType)) {
+				while ((newCurrent->next) != NULL && (newCurrent->next->talent).getJobCost(jobType) < (current->talent).getJobCost(jobType)) {
 					newCurrent = newCurrent->next;
 				}
 				current->next = newCurrent->next;
@@ -93,7 +93,7 @@ void TalentLinkedList::insertionSort(Node* node, string jobType) {
 		}
 		current = next;
 	}
-	node = sorted;
+	//node = sorted;
 }
 
 TalentLinkedList TalentLinkedList::getTalents() {
@@ -109,7 +109,7 @@ TalentLinkedList TalentLinkedList::getTalents() {
 	tal1.addJobType("Flooring", 23);
 	tal2.addJobType("Carpenter", 43);
 	tal2.addJobType("Plumber", 39);
-	tal2.addJobType("Roofer", 26);
+	tal2.addJobType("Roofing", 26);
 	tal3.addJobType("Electrician", 30);
 	tal4.addJobType("Plumber", 43);
 	tal4.addJobType("Flooring", 87);
